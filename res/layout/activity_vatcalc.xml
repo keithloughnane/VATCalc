@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".VATCalc" >
+
+    <TextView
+        android:id="@+id/VATTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="14dp"
+        android:text="@string/beforeVAT" />
+
+    <EditText
+        android:id="@+id/PreVATEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/VATTextView"
+        android:layout_alignBottom="@+id/VATTextView"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:ems="5"
+        android:inputType="numberDecimal"
+        android:text="@string/afterVAT_Text" />
+
+    <EditText
+        android:id="@+id/AfterVATText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/PreVATEditText"
+        android:layout_alignTop="@+id/textVAT"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="22dp"
+        android:ems="5"
+        android:text="@string/afterVAT_Text" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/AfterVAT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/AfterVATText"
+        android:layout_alignBottom="@+id/AfterVATText"
+        android:layout_alignLeft="@+id/VATTextView"
+        android:text="@string/afterVAT" />
+
+    <TextView
+        android:id="@+id/textVAT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/AfterVAT"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="83dp"
+        android:text="@string/VAT" />
+
+    <EditText
+        android:id="@+id/VAT_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textVAT"
+        android:layout_alignBottom="@+id/textVAT"
+        android:layout_alignLeft="@+id/AfterVATText"
+        android:ems="5"
+        android:text="@string/VAT_text" />
+
+    <SeekBar
+        android:id="@+id/changeAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/PreVATEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp" />
+
+</RelativeLayout>
